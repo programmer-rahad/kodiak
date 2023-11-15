@@ -1,0 +1,55 @@
+#welcome-section { 
+  position: relative;
+  margin-top: 100px;
+  @media(max-width: 1056px) {
+    margin-top: 90px;
+  }
+    video {
+      height: 100vh;
+      @include md-max {
+      height: 90vh;
+      }
+    } 
+    .welcome-text {
+      color: #fff;
+      position: absolute;
+      bottom: 80px;
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+      p {
+        text-shadow: 0px 0px 3px #000;
+        &:first-child {
+          font-size: 30px;
+          letter-spacing: 10px;
+          @include md-max {
+            font-size: 20px;
+            letter-spacing: 5px;
+          }
+          @include tab-max {
+            margin-bottom: 15px;
+            letter-spacing: 0px;
+            font-weight: 700; 
+          }
+        }
+        &:nth-child(2) {
+          font-size: 60px;
+          font-family: $secondary-font;
+          margin: 35px 0;
+          @include md-max {
+            font-size: 45px;
+            margin: 25px 0;
+          }
+          @include tab-max {          
+            margin: 15px 0;
+            line-height: 1.1;
+          }
+        }
+        &:last-child {
+          img {
+            max-width: 650px;
+          }
+        }
+      }
+    }
+}

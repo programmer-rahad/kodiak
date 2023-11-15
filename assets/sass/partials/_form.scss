@@ -1,0 +1,51 @@
+#form-section {
+    padding: 60px 0;
+    background-color: #bcd0ab;
+    .form-wrapper {
+        h3 {
+            color: #fff;
+        }
+        p {
+            color: #fff;
+            max-width: 462px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 600;
+            letter-spacing: .5px;
+        }
+        form {
+            input {
+                font-size: 15px; 
+                outline: 0;
+                margin: 5px 0;
+                padding: 11px 5px 11px 13px;
+                max-width: 180px;
+                border: none;
+                font-family: $secondary-font;
+                font-style: italic;
+                @include tab-max {
+                width: 100%;
+                max-width: 100%;
+                }
+                &::placeholder {
+                    color: #757575;
+                }
+                &[type="email"] {
+                    width: 100%;
+                    max-width: 330px;
+                    @include tab-max {
+                    max-width: 100%;
+                    }
+                }
+                &[type="submit"] {
+                    color: #fff;
+                    background-color: $primary-color;
+                    padding: 11px 33px;
+                    &:hover {
+                        background-color: #4F7F28;
+                    }
+                }
+            }
+        }
+    }
+}

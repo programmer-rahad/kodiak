@@ -1,0 +1,116 @@
+#video-section {
+  background-image: url(../images/video/video-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+  @include tab-max {
+    padding: 65px 0;
+  }
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    background-color: #000;
+    opacity: 0.45;
+    top: 0;
+    z-index: -1;
+  }
+  .container {
+    max-width: 1300px;
+    .row {
+      [class*="col-"] {
+        &:first-child {
+          @include md-max {
+            order: 1;
+            width: 50%;
+          }
+          @include tab-max {
+            width: 55%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          @include mobile-max {
+            width: 100%;
+          }
+        }
+        &:nth-child(2) {
+          @include md-max {
+            margin-bottom: 30px;
+          }
+        }
+        &:last-child {
+          @include md-max {
+            order: 2;
+            width: 50%;
+          }
+          @include tab-max {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .video-play {
+    position: relative;
+    a.video-btn {
+      color: #fff;
+      width: 95px;
+      height: 95px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border: 3px solid;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-50%, -50%);
+      @include mobile-max {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+      }
+    }
+  }
+  .video-content {
+    p {
+      @media (min-width: 1200px) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+#video-bottom-content {
+  .container {
+    max-width: 1320px;
+  }
+  .vbc-item {
+    margin-bottom: 60px;
+    padding-right: 20px;
+    &:last-child {
+      margin-bottom: 0;
+      @include md-max {
+        margin-bottom: 60px;
+      }
+    }
+  }
+  .vbc-image {
+    padding-left: 120px;
+    img {
+      &:first-child {
+        max-width: 520px;
+      }
+      &:last-child {
+        position: relative;
+        max-width: 408px;
+        margin-top: -50px;
+        transform: translateX(-120px);
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+#award-winning {
+    margin-top: 15px;
+    @include md-max {
+    padding-bottom: 50px;
+    }
+    .container {
+        max-width: 1320px;
+    }
+    .award-top {
+        margin-bottom: 50px;
+        h3 {
+            @include mobile-max {
+            font-size: 20px;
+            }
+        }
+        a.common-btn {
+            font-family: $secondary-font;
+            @include mobile-max {
+                font-size: 14px;
+    padding: 7px 15px;
+    border-radius: 5px;
+            }
+        }
+    }
+    .award-items {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        .award-item {
+            width: 20%;
+            padding-left: 15px;
+            padding-right: 15px;
+            @include md-max {
+            width: calc(100% / 3);
+            }
+            @include mobile-max {
+            width: calc(100% / 2);
+            }
+            img {
+                width: auto;
+                margin-bottom: 15px;
+            }
+            h4 {
+                font-size: 18px;
+                margin-bottom: 5px;
+                font-weight: 700;
+                font-family: $secondary-font;
+            }
+            p {
+                font-family: $secondary-font;
+                font-size: 17px;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+#inspiration-section {
+  background: url(../images/inspiration-bg.jpg) no-repeat center center / cover;
+  .container {
+    max-width: 1320px;
+  }
+  .inspiration-content {
+    background-color: rgba(92, 148, 49, 0.75);
+    padding: 100px 60px 80px;
+    @include md-max {
+      margin-top: 13.5px;
+      margin-bottom: 13.5px;
+    }
+    @include tab-max {
+    padding: 50px 35px 50px;
+    }
+    h3 {
+      color: white;
+    }
+    p {
+      color: white;
+    }
+  }
+}
